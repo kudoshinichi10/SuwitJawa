@@ -1,5 +1,6 @@
 // Ucapan selamat datang 
 alert('Selamat Datang di Game Suwit Jawa');
+
 // Perintahkan user untuk menginputkan pilihan 
 let inputUser = prompt('Silahkan pilih MANUSIA , GAJAH, SEMUT');
 
@@ -11,38 +12,25 @@ if (comp <= 0.33){
     comp = 'gajah';
 } else {
     comp = 'semut';
-    
 }
 
-// Beri tahu user pilihan Komputer
+// Beri tahu kepada user pilihan Komputer
 alert(`Lawanmu memilih ${comp}`);
 
-// Bandingkan pilihan Komputer dengan inputan user
+// buat variabel untuk wadah hasil 
+let hasil;
+
+// Bandingkan pilihan Komputer dengan pilihan user
 
 // jika pilihan user dan komputer sama maka akan seri
 if (inputUser == comp){
-        alert('Kamu Seri !');
+    hasil = 'Kamu Seri !';
 } 
-
 // jika pilihan user dan comp berbeda
-else if (inputUser === 'gajah') {
-    if(comp === 'manusia'){
-        alert('Kamu Menang');
-    } 
     else {
-        alert('Kamu Kalah');
+        // menggunakan operasi ternary
+        hasil = ((inputUser == 'manusia' && comp == 'semut') || (inputUser == 'gajah' && comp == 'manusia') || (inputUser == 'semut' && comp == 'gajah')) ? 'Kamu Menang' : 'Kamu Kalah';
     }
-} else if (inputUser === 'manusia') { 
-    if(comp === 'semut'){
-        alert('Kamu Menang');
-    } else {
-        alert('Kamu Kalah');
-    }
-} else {
-    if(comp == 'gajah'){
-        alert('Kamu Menang');
-    } else {
-        alert('Kamu Kalah');
-    }
-    
-}
+
+// tampilkan hasil permainan kepada user
+alert(hasil);
