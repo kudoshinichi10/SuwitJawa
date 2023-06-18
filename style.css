@@ -16,13 +16,14 @@ body {
 
 .main {
     max-width: 500px;
-    /* background-color: aqua; */
-    height: 300px;
-    margin: 100px auto;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
+}
+
+.main > * {
+    margin-top: 10px;
 }
 
 .main div img {
@@ -31,20 +32,18 @@ body {
     border: 3px solid black;
 }
 
-.main span {
-    padding: 20px;
-    display: block;
+.main .versus {
+    width: 100px;
+    align-self: center;
 }
 
 .main .btn {
     height: 50px;
-    font-weight: bold;
-    /* border: 4px solid black; */
+    font-size: 30px;
     background-color: skyblue;
 }
 
 .footer {
-    width: 100%;
     background-color: rgba(0, 0, 0, .5);
     padding: 20px;
     box-sizing: border-box;
