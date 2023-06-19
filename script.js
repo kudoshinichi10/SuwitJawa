@@ -47,6 +47,46 @@
 
 
 // menangkap element gambar yang akan dipilih
-const pilihanUser = document.querySelectorAll('.container .main .user img');
+let pilihanUser = Array.from(document.querySelectorAll('.container .main .user .kotak-pilih img'));
+let user;
 
 // jika gambar di klik oleh user
+for(let i = 0; i < pilihanUser.length; i++){
+    pilihanUser[i].addEventListener('click', function(){
+        user = pilihanUser[i].getAttribute('class');
+
+        // menangkap element button
+        let button = document.querySelector('button');
+        button.addEventListener('click', function(){
+            // Komputer memilih secara acak
+            let comp = Math.random();
+            if (comp <= 0.33){
+                comp = 'manusia';
+            }else if(comp > 0.33 &&  comp < 0.66){
+                comp = 'pilihGajah';
+            } else {
+                comp = 'pilihSemut';
+            }
+            console.log(comp);
+            if (user == comp){
+        hasil = 'Kamu Seri !';
+    } 
+    // jika pilihan user dan comp berbeda
+        else {
+            // menggunakan operasi ternary
+            hasil = ((user == 'manusia' && comp == 'pilihSemut') || (user == 'pilihGajah' && comp == 'manusia') || (user == 'pilihSemut' && comp == 'pilihGajah')) ? 'Kamu Menang' : 'Kamu Kalah';
+        }
+
+
+        // tampilkan hasil
+        const ucapan = document.querySelector('.main .hasil');
+        ucapan.innerHTML = hasil;
+
+
+
+
+
+        })
+    })
+    }
+
