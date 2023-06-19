@@ -46,5 +46,10 @@ body {
 .footer {
     background-color: rgba(0, 0, 0, .5);
     padding: 20px;
+    text-align: center;
     box-sizing: border-box;
+}
+
+.footer a img {
+    width: 50px;
 }
