@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,50 +8,60 @@
     <title>Suwit Jawa</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontstyle.css">
+    <link rel="stylesheet" href="reset.css">
 </head>
-<body>
-        <div class="container">
-            <div class="header">
-                <h1>SUWIT GAME</h1>
-            </div>
-            <div class="main">
-                <div class="user">
-                    <h2>Kamu</h2>
-                    <span>Klik gambar untuk memilih</span>
-                    <div class="kotak-pilih">
-                        <div class="siNur">
-                            <img src="image/manusia2.jpg" alt="" class="manusia">
-                            <span>Si Nur</span>
-                        </div>
-                        <div class="gajah">
-                            <img src="image/gajah2.jpeg" alt="" class="pilihGajah">
-                            <span>Gajah</span>
-                        </div>
-                        <div class="semut">
-                            <img src="image/semut2.jpg" alt="" class="pilihSemut">
-                            <span>Semut</span>
-                        </div>
 
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SUWIT GAME</h1>
+        </div>
+        <div class="main">
+
+            <!-- wilayah user atau pengguna -->
+            <div class="user">
+                <h2>Kamu</h2>
+                <span>Klik gambar untuk memilih</span>
+                <!-- wilayah untuk user memilih pilihan -->
+                <div class="kotak-pilih">
+                    <div class="manusia">
+                        <img src="image/manusia.jpg" alt="" class="pilihManusia">
+                        <span>Si Nur</span>
+                    </div>
+                    <div class="gajah">
+                        <img src="image/gajah.jpeg" alt="" class="pilihGajah">
+                        <span>Gajah</span>
+                    </div>
+                    <div class="semut">
+                        <img src="image/semut.jpg" alt="" class="pilihSemut">
+                        <span>Semut</span>
                     </div>
                 </div>
-                <img src="image/versus.png" alt="" class="versus">
-                <div class="komputer">
-                    <h2>Lawan</h2>
-                    <img src="image/manusia2.jpg" alt="">
-                </div>
-                <div class="hasil"></div>
-                <button class="btn">Mulai Permainan</button>
             </div>
-            <div class="footer">
-                <a href="https://m.facebook.com/rahadityaabimanyu.putra" target="_blank">
-                    <img src="image/facebook-circle-line.svg" alt="">
-                </a>
-                <a href="https://www.instagram.com/rahadityaputra/" target="_blank">
-                    <img src="image/instagram-line.svg" alt="">
-                </a>
-                <p>Copyright &#9400 2023 Rahaditya Abimanyu Putra. All Rights Reserved</p>
+            <img src="image/versus.png" alt="" class="versus">
+            <!-- wilayah pilihan komputer -->
+            <div class="komputer">
+                <h2>Lawan</h2>
+                <img src="image/manusia.jpg" alt="">
             </div>
+
+            <!-- untuk menunjukkan hasil permainan -->
+            <div class="hasil"></div>
+
+            <!-- tombol untuk memulai permainan -->
+            <button class="btn">Mulai Permainan</button>
         </div>
-        <script src="script.js"></script>
+        <div class="footer">
+            <a href="https://m.facebook.com/rahadityaabimanyu.putra" target="_blank">
+                <img src="image/facebook-circle-line.svg" alt="">
+            </a>
+            <a href="https://www.instagram.com/rahadityaputra/" target="_blank">
+                <img src="image/instagram-line.svg" alt="">
+            </a>
+            <p>Copyright &#9400 2023 Rahaditya Abimanyu Putra. All Rights Reserved</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

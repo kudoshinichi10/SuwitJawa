@@ -3,42 +3,55 @@ body {
     background-repeat: repeat;
     background-size: cover;
     color: white;
+}
+
+.container {
     font-family: 'Montserrat';
+    font-size: 1em;
 }
 
-.header {
+.container .header {
     text-align: center;
+    font-size: 2em;
+    padding: 20px;
 }
 
-.main {
-    max-width: 500px;
+.container .header h1 {
+    text-shadow: 4px 5px 5px black;
+}
+
+.container .main {
+    width: 100%;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.main > * {
-    margin-top: 10px;
+.container .main div h2 {
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 10px 0;
 }
 
-.main .user span {
+.container .main .user span {
     display: block;
     margin: 20px 0;
 }
 
-.main div img {
-    width: 100px;
+.container .main .user .kotak-pilih div img, .container .main .komputer img {
+    width: 80px;
     border-radius: 50%;
     border: 3px solid black;
 }
 
-.main .versus {
+.container .main .versus {
     width: 50px;
     align-self: center;
 }
 
-.main .btn {
+.container .main .btn {
+    max-width:100px;
     height: 50px;
     font-size: 30px;
     background-color: skyblue;
@@ -57,13 +70,13 @@ body {
     font-size: 40px;
 }
 
-.footer {
+.container .footer {
     background-color: rgba(0, 0, 0, .5);
     padding: 20px;
     text-align: center;
     box-sizing: border-box;
 }
 
-.footer a img {
+.container .footer a img {
     width: 50px;
 }
