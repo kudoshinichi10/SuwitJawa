@@ -63,10 +63,6 @@ body {
     justify-content: space-evenly;
 }
 
-.main .kotak-pilih img:hover {
-    transform: scale(1.1);
-}
-
 .container .main .hasil {
     font-size: 40px;
 }
@@ -80,4 +76,12 @@ body {
 
 .container .footer a img {
     width: 50px;
+}
+
+
+/* css untuk pilihan user */
+
+.container .main .user .kotak-pilih div {
+    display: flex;
+    flex-direction: column;
 }
