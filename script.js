@@ -1,8 +1,56 @@
-// menangkap element gambar yang akan dipilih
-const gambarDipilih = document.querySelectorAll('.container .main .user .kotak-pilih div img');
+// menangkap element gambar pilihan
+const gambarDipilih = document.querySelectorAll('.container .main .user .kotak-pilih div input');
+
+// menangkap pilihan user
+
+// variabel untuk menampung pilihan user
+let pilUser;
+
+gambarDipilih[0].addEventListener('change', function (){
+   pilUser = this.className;
+  })
+  gambarDipilih[1].addEventListener('change', function (){
+    pilUser = this.className;
+  })
+  gambarDipilih[2].addEventListener('change', function (){
+    pilUser = this.className;
+})
 
 
-// console.log(pilihanUser);
+// function untuk menghasilkan pilihan komputer
+
+function pilCom() {
+  // Komputer memilih secara acak
+    let comp = Math.random();
+if (comp <= 0.33){
+    return comp = 'manusia';
+}else if(comp > 0.33 &&  comp < 0.66){
+    return comp = 'gajah';
+} else {
+    return comp = 'semut';
+}
+}
+
+
+// function hasil permainan
+
+function hasil(pilCom, pilUser){
+  // menangkap ement gambar pilihan komputer
+  let gambarPilihanKomputer = document.querySelector('.container .main .komputer img');
+
+  // mengubah gambar pilihan komputer sesuai dengan pilihan komputer
+  gambarPilihanKomputer.setAttribute('src', `image/${pilCom}.jpg`);
+
+  if (pilCom == pilUser){
+    return 'Kamu Seri';
+   } 
+  // jika pilihan user dan pilUser berbeda
+  else {
+    // menggunakan operasi ternary
+    return ((pilCom == 'manusia' && pilUser == 'semut') || (pilCom == 'gajah' && pilUser == 'manusia') || (pilCom == 'semut' && pilUser == 'gajah')) ? 'Kamu Kalah' : 'Kamu Menang'}
+    }
+
+
 
 
 // menangkap element button
@@ -10,58 +58,10 @@ const button = document.querySelector('button');
 
 // jika button di klik
 button.addEventListener('click', function() {
-  // jika gambar di klik oleh user maka akan mengembalikan sebuat class
-  gambarDipilih.forEach(function(e){
-    e.addEventListener('click', function(){
-      console.log(e.className);
-    })
-  })
-
-})
-
-
-      
-// Komputer memilih secara acak
-let comp = Math.random();
-if (comp <= 0.33){
-    comp = 'manusia';
-}else if(comp > 0.33 &&  comp < 0.66){
-    comp = 'gajah';
-} else {
-    comp = 'semut';
-}
-  // console.log(comp);
-
-// function versus(hasil){
-  
-
-//     if (user == comp){
-//         return 'Kamu Seri';
-//     } 
-  // jika pilihan user dan comp berbeda
-      // else {
-    // menggunakan operasi ternary
-      // return ((user == 'manusia' && comp == 'pilihSemut') || (user == 'pilihGajah' && comp == 'manusia') || (user == 'pilihSemut' && comp == 'pilihGajah')) ? 'Kamu Menang' : 'Kamu Kalah'}
-// }
-
-
-
-
-// menangkap element untuk menampilkan hasil
-// const ucapan = document.querySelector('.container .main .hasil');
+  // menangkap element untuk menampilkan hasil
+const hasilPermainan = document.querySelector('.container .main .hasil');
 
 // tampilkan hasil
-// ucapan.innerHTML = versus();
+hasilPermainan.innerHTML = hasil(pilCom(), pilUser);
 
-
-
-
-
-
-
-
-// menangkap element button
-// let button = document.querySelector('button');
-// button.addEventListener('click', function(){
-
-// }
+})
