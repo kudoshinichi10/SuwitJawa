@@ -1,24 +1,22 @@
-body {
-    color: rgb(27, 1, 1);
-}
-
 .container {
-    font-family: 'Montserrat';
+    font-family: 'Verdana';
+    background-color: rgb(4, 179, 4);
     font-size: 1em;
 }
 
 .container .header {
     text-align: center;
-    font-size: 2em;
     padding: 20px;
 }
 
 .container .header h1 {
-    text-shadow: 4px 5px 5px black;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .container .main {
-    width: 100%;
+    background-color: rgb(0, 208, 244);
+    max-width: 500px ;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
@@ -27,19 +25,40 @@ body {
 
 .container .main div h2 {
     font-size: 1.5em;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgb(255, 0, 0);
     padding: 10px 0;
 }
 
-.container .main .user span {
+/* .container .main .user span {
     display: block;
     margin: 20px 0;
-}
+} */
 
+
+/* css untuk bagian user */
+.container .main .user {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .container .main .user .kotak-pilih div img, .container .main .komputer img {
     width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: 3px solid black;
+}
+
+/* css untuk bsgian komputer */
+.container .main .komputer {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .main .komputer img {
+    align-self: center;
 }
 
 .container .main .versus {
@@ -48,11 +67,11 @@ body {
 }
 
 .container .main .btn {
-    max-width:300px;
+    /* max-width:300px; */
     height: 50px;
     font-size: 30px;
     background-color: skyblue;
-    margin: auto;
+    margin: 50px auto;
 }
 
 .container .main .kotak-pilih {
@@ -61,6 +80,7 @@ body {
 }
 
 .container .main .hasil {
+    height: 50px;
     font-size: 40px;
 }
 
