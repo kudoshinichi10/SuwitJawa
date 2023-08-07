@@ -35,12 +35,17 @@ if (comp <= 0.33){
 // function hasil permainan
 
 function hasil(pilCom, pilUser){
+
+// jika user belum memilih pilihan maka game akan memberi tahu user
+if(pilUser == undefined){
+  return `Kamu belum memilih pilihan !`
+} else {
   // menangkap ement gambar pilihan komputer
   let gambarPilihanKomputer = document.querySelector('.container .main .komputer img');
-
+  
   // mengubah gambar pilihan komputer sesuai dengan pilihan komputer
   gambarPilihanKomputer.setAttribute('src', `image/${pilCom}.jpg`);
-
+  
   if (pilCom == pilUser){
     return 'Kamu Seri';
    } 
@@ -48,6 +53,11 @@ function hasil(pilCom, pilUser){
   else {
     // menggunakan operasi ternary
     return ((pilCom == 'manusia' && pilUser == 'semut') || (pilCom == 'gajah' && pilUser == 'manusia') || (pilCom == 'semut' && pilUser == 'gajah')) ? 'Kamu Kalah' : 'Kamu Menang'}
+
+}
+
+
+
     }
 
 
@@ -64,4 +74,28 @@ const hasilPermainan = document.querySelector('.container .main .hasil');
 // tampilkan hasil
 hasilPermainan.innerHTML = hasil(pilCom(), pilUser);
 
+// beri warna background pada kolom hasil sesuai dengan hasilnya
+// jika menang warna hijau
+// jika kalah warna merah
+// jika seri warna biru
+
+if(hasilPermainan.innerHTML == 'Kamu Kalah'){
+  hasilPermainan.style.backgroundColor = 'red';
+} else if(hasilPermainan.innerHTML == 'Kamu Menang'){
+  hasilPermainan.style.backgroundColor = 'green';
+} else if(hasilPermainan.innerHTML == 'Kamu Seri'){
+  hasilPermainan.style.backgroundColor = 'blue';
+} else {
+  hasilPermainan.style.color = 'red';
+
+}
+
+
 })
+
+
+
+
+
+
+
