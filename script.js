@@ -1,3 +1,35 @@
+// variabel user digunakan untuk menampung nama user
+const user = prompt('Siapa Namamu ? ');
+
+// menangkap element ucapan
+const elementUcapan = document.querySelector('.container .ucapan h2');
+
+// beri ucapan kepada user
+
+// todo jika user tidak mengisi nama makan ucapan tidak diikuti dengan nama.
+
+// function untuk cetak ucapan
+function cetakNama(namaUser) {
+  if (namaUser != null) {
+    elementUcapan.textContent = ucapan(namaUser); 
+  } else {
+    elementUcapan.textContent = `Selamat Pagi`; 
+  }
+  // todo ucapan di sesuaikan dengan waktu real time.
+  // todo jika waktu dari jam 12 malam sampai jam 10 pagi maka selamat pagi
+  // todo jika waktu dari jam 10 pagi sampai jam 2 sore maka selamat siang
+  // todo jika waktu dari jam 2 sore sampai jam 6 sore maka selamat sore
+  // todo jika waktu dari jam 6 sore sampai jam 12 malam maka selamat malam
+}
+
+// function untuk ucapan
+function ucapan(namaUser) {
+  return `Selamat Pagi ${namaUser}`;
+}
+
+// menjalankan function cetak ucapan
+cetakNama(user);
+
 // menangkap element gambar pilihan
 const gambarDipilih = document.querySelectorAll('.container .main .user .kotak-pilih div input');
 
@@ -34,6 +66,7 @@ if (comp <= 0.33){
 
 // function hasil permainan
 
+
 function hasil(pilCom, pilUser){
 
 // jika user belum memilih pilihan maka game akan memberi tahu user
@@ -53,12 +86,11 @@ if(pilUser == undefined){
   else {
     // menggunakan operasi ternary
     return ((pilCom == 'manusia' && pilUser == 'semut') || (pilCom == 'gajah' && pilUser == 'manusia') || (pilCom == 'semut' && pilUser == 'gajah')) ? 'Kamu Kalah' : 'Kamu Menang'}
-
 }
-
-
-
     }
+
+
+
 
 
 
@@ -74,10 +106,10 @@ const hasilPermainan = document.querySelector('.container .main .hasil');
 // tampilkan hasil
 hasilPermainan.innerHTML = hasil(pilCom(), pilUser);
 
-// beri warna background pada kolom hasil sesuai dengan hasilnya
-// jika menang warna hijau
-// jika kalah warna merah
-// jika seri warna biru
+// todo beri warna background pada kolom hasil sesuai dengan hasilnya
+// todo jika menang warna hijau
+// todo jika kalah warna merah
+// todo jika seri warna biru
 
 if(hasilPermainan.innerHTML == 'Kamu Kalah'){
   hasilPermainan.style.backgroundColor = 'red';
@@ -86,12 +118,15 @@ if(hasilPermainan.innerHTML == 'Kamu Kalah'){
 } else if(hasilPermainan.innerHTML == 'Kamu Seri'){
   hasilPermainan.style.backgroundColor = 'blue';
 } else {
-  hasilPermainan.style.color = 'red';
+  // hasilPermainan.style.color = 'red';
 
 }
 
 
 })
+
+
+
 
 
 
