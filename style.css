@@ -116,3 +116,9 @@
     font-size: 2em;
     text-align: center;
 }
+
+/* css untuk waktu */
+
+.container .waktu h3 {
+    text-align: center;
+}

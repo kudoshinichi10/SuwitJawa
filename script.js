@@ -4,10 +4,20 @@ const user = prompt('Siapa Namamu ? ');
 // menangkap element ucapan
 const elementUcapan = document.querySelector('.container .ucapan h2');
 
+// menangkap element waktu
+const waktu  = document.querySelector('.container .waktu h3');
+
+
+// function untuk waktu berjalan
+setInterval(waktuJalan, 1000);
+
+// function untuk waktu
+function waktuJalan() {
+  waktu.innerHTML = new Date().toLocaleTimeString();
+}
+
 // beri ucapan kepada user
-
 // todo jika user tidak mengisi nama makan ucapan tidak diikuti dengan nama.
-
 // function untuk cetak ucapan
 function cetakNama(namaUser) {
   if (namaUser != null) {
