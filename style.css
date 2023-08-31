@@ -120,5 +120,6 @@
 /* css untuk waktu */
 
 .container .waktu h3 {
+    margin: 10px;
     text-align: center;
 }

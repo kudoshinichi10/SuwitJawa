@@ -1,5 +1,7 @@
 // variabel user digunakan untuk menampung nama user
-const user = prompt('Siapa Namamu ? ');
+
+var user = prompt('Siapa Namamu ? ');
+
 
 // menangkap element ucapan
 const elementUcapan = document.querySelector('.container .ucapan h2');
