@@ -1,84 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Suwit Jawa</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Open+Sans:wght@300&family=Single+Day&display=swap" rel="stylesheet" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suwit Jawa</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="fontstyle.css"> -->
-    <link rel="stylesheet" href="reset.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>SUWIT GAME</h1>
+	<body>
+        <div class="topbar">
         </div>
-        <div class="ucapan">
-            <h2></h2>
-        </div>
-        <div class="waktu">
-            <h3></h3>
-        </div>
-        <div class="main">
-
-            <!-- wilayah user atau pengguna -->
-            <div class="user">
-                <h2>
-                    <span>Kamu</span>
-                </h2>
-                <!-- wilayah untuk user memilih pilihan -->
-                <div class="kotak-pilih">
-                    <div>
-                        <img src="image/manusia.jpg" alt="" >
-                        <input type="radio" name="pilUser" class="manusia">
-                        <span>Si Nur</span>
-                    </div>
-                    <div>
-                        <img src="image/gajah.jpg" alt="" >
-                        <input type="radio" name="pilUser" class="gajah">
-                        <span>Gajah</span>
-                    </div>
-                    <div>
-                        <img src="image/semut.jpg" alt="">
-                        <input type="radio" name="pilUser"  class="semut">
-                        <span>Semut</span>
-                    </div>
-                </div>
-            </div>
-            <img src="image/versus.png" alt="" class="versus">
-            <!-- wilayah pilihan komputer -->
-            <div class="komputer">
-                <h2>
-                    <span>
-                        Lawan
-                    </span>
-                </h2>
-                <img src="image/tandaTanya.jpg" alt="">
-
-                <!-- element span digunakan untuk menampung pilihan komputer -->
-                <span></span>
-            </div>
-
-            <!-- untuk menunjukkan hasil permainan -->
-            <div class="hasil"></div>
-
-            <!-- tombol untuk memulai permainan -->
-            <button class="btn">Mulai</button>
-        </div>
-        <div class="footer">
-            <a href="https://m.facebook.com/rahadityaabimanyu.putra" target="_blank">
-                <img src="image/facebook-circle-line.svg" alt="">
-            </a>
-            <a href="https://www.instagram.com/rahadityaputra/" target="_blank">
-                <img src="image/instagram-line.svg" alt="">
-            </a>
-            <p>Copyright &#9400 2023 Rahaditya Abimanyu Putra. All Rights Reserved</p>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-
+		<div class="container">
+			<div class="header">
+				<h1>SUWIT GAME</h1>
+			</div>
+			<div class="user">
+				<div class="kotak-pilih">
+					<div>
+						<img src="image/manusia.png" class="manusia" />
+						<span>Manusia</span>
+					</div>
+					<div>
+						<img src="image/gajah.png" class="gajah" />
+						<span>Gajah</span>
+					</div>
+					<div>
+						<img src="image/semut.png" class="semut" />
+						<span>Semut</span>
+					</div>
+				</div>
+			</div>
+			<div class="versus">
+				<span>VS</span>
+			</div>
+			<div class="komputer">
+				<img src="image/manusia.png" alt="" />
+				<span></span>
+			</div>
+			<button class="btn">Mulai</button>
+			<div class="hasil">
+				<span></span>
+			</div>
+			<div class="footer">
+				<p>CREATED WITH LOVE BY RAHADITYA</p>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
